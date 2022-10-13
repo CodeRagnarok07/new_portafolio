@@ -1,26 +1,21 @@
-import { useEffect, useRef } from 'react';
 import './App.css';
 
 function App() {
 
-
-  const vidRef = useRef();
-
-  const play = () => {
-    vidRef.current.play();
-
-  }
-
-  useEffect(() => {
-
-
-    play()
-  }, [vidRef]);
   return (
 
     <div className="center" >
 
-      <video onMouseEnter={(e) => e.target.play()} className='video' ref={vidRef} width={"100%"} loop src="video.mp4"></video>
+
+
+
+      <iframe
+        className='video'
+        src="https://www.youtube.com/embed/ErDW1ZzeBQQ?controls=0?autoplay=0" 
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen />
 
       <div className='container'>
 
